@@ -47,30 +47,52 @@ Console.WriteLine(@$"
 
 switch(opcao){
 
-  case "1":
-  Endereco end = new Endereco ();
-
-  end.logradouro = "Rua Niterói";
-  end.numero = 180;
-  end.complemento = "Escola SENAI";
-  end.enderecoComercial = true;
+  case "1": 
 
   PessoaFisica novapf = new PessoaFisica ();
 
-  novapf.cpf = "080.733.239-90";
-  novapf.endereco = end;
-  novapf.DataNascimento = new DateTime (1991,06,16); //Padrão americano= Ano; mês; dia
-  novapf.Nome = "Ygor Andrade";
-  
-  Console.WriteLine($"O endereço do {novapf.Nome} é {novapf.endereco.logradouro}, nº {novapf.endereco.numero}.");
-  
-  bool idadeValidade = novapf.ValidarDataNascimento (novapf.DataNascimento);
+string? opcaoPF; //Submenu de Pessoa Física
 
-  if (idadeValidade == true){
-  Console.WriteLine ($"{novapf.Nome} é maior de idade");
-  }else{
-  Console.WriteLine ($"{novapf.Nome} é menor de idade");
-  }
+do{
+
+  Console.Clear ();
+  Console.WriteLine(@$"
+ Escolha uma das opções abaixo:
+
+ 1 - Cadastrar Pessoa Física;
+
+ 2 - Mostrar Pessoas Físicas;
+
+ 0 - Voltar ao menu anterior;
+ ");
+
+opcaoPF = Console.ReadLine();
+
+}while (opcaoPF != "0");
+
+  // Endereco end = new Endereco ();
+
+  // end.logradouro = "Rua Niterói";
+  // end.numero = 180;
+  // end.complemento = "Escola SENAI";
+  // end.enderecoComercial = true;
+
+  
+
+  // novapf.cpf = "080.733.239-90";
+  // novapf.endereco = end;
+  // novapf.DataNascimento = new DateTime (1991,06,16); //Padrão americano= Ano; mês; dia
+  // novapf.Nome = "Ygor Andrade";
+  
+  // Console.WriteLine($"O endereço do {novapf.Nome} é {novapf.endereco.logradouro}, nº {novapf.endereco.numero}.");
+  
+  // bool idadeValidade = novapf.ValidarDataNascimento (novapf.DataNascimento);
+
+  // if (idadeValidade == true){
+  // Console.WriteLine ($"{novapf.Nome} é maior de idade");
+  // }else{
+  // Console.WriteLine ($"{novapf.Nome} é menor de idade");
+  // }
 
   break;
 
