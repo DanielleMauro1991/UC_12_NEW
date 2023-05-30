@@ -72,21 +72,49 @@ switch (opcaoPF){
   PessoaFisica novapf = new PessoaFisica ();
   Endereco endereco = new Endereco ();
 
-  Console.WriteLine("Digite o nome da Pessoa Física que deseja cadastrar")
+  Console.WriteLine("Digite o nome da Pessoa Física que deseja cadastrar");
   novapf.Nome = Console.ReadLine();
 
-  Console.WriteLine("Digite o logradouro da Pessoa Física que deseja cadastrar");
 
+
+   Console.WriteLine("Digite a data de nascimento   EX: DD/MM/AAAA");
+   novapf.DataNascimento = DateTime.Parse(Console.ReadLine()); //Padrão americano= Ano; mês; dia
+
+  bool idadeValidade = novapf.ValidarDataNascimento (novapf.DataNascimento);
+
+   if (idadeValidade == true){
+   Console.WriteLine ($"{novapf.Nome} é maior de idade");
+   }else{
+   Console.WriteLine ($"{novapf.Nome} é menor de idade");
+   }
+
+
+
+   Console.WriteLine("Digite o CPF");
+   novapf.cpf = Console.ReadLine();
+
+
+
+   novapf.endereco = endereco;
+
+   Console.WriteLine("Digite o logradouro");
    endereco.logradouro = Console.ReadLine();
-  //  endereco.numero = 180;
-  //  endereco.complemento = "Escola SENAI";
-  //  endereco.enderecoComercial = true;
 
-  //  novapf.cpf = "080.733.239-90";
-  //  novapf.endereco = endereco;
-  //  novapf.DataNascimento = new DateTime (1991,06,16); //Padrão americano= Ano; mês; dia
-  
-  
+   Console.WriteLine("Digite o número");
+   endereco.numero = int.Parse(Console.ReadLine());
+
+   Console.WriteLine("Digite o complemento");
+   endereco.complemento = Console.ReadLine();
+
+   Console.WriteLine("Trata-se de local comercial?  S/N");
+   string endCom = Console.ReadLine().ToUpper();
+
+   if (endCom == "S"){
+    endereco.enderecoComercial = true;
+   } else{
+    endereco.enderecoComercial = false;
+   }
+     
   break;
 
   case "2": 
@@ -104,22 +132,13 @@ switch (opcaoPF){
 
 }while (opcaoPF != "0");
 
-   
+break;
 
-  
-
-  
+     
   // Console.WriteLine($"O endereço do {novapf.Nome} é {novapf.endereco.logradouro}, nº {novapf.endereco.numero}.");
   
-  // bool idadeValidade = novapf.ValidarDataNascimento (novapf.DataNascimento);
-
-  // if (idadeValidade == true){
-  // Console.WriteLine ($"{novapf.Nome} é maior de idade");
-  // }else{
-  // Console.WriteLine ($"{novapf.Nome} é menor de idade");
-  // }
-
-  break;
+  
+  
 
  
   case "2":
