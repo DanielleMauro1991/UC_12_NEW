@@ -1,7 +1,4 @@
-﻿using System.Data;
-using System;
-using Sistema_UC12;
-using Sistema_UC12.Classes;
+﻿using Sistema_UC12.Classes;
 
 class Program
 {

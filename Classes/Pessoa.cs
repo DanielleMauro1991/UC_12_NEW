@@ -8,7 +8,7 @@ namespace Sistema_UC12.Classes
     public abstract class Pessoa //Classe Abstrata= Não pode instanciar
     {
         public string? Nome {get; set;} //? Para deixar o objeto nullable
-       public Endereco? endereco { get; set; } //Composição Endereço (uma classe dentro de outra classe)
-        public abstract void PagarImposto (float rendimento); //Pessoa é a classe-mãe; PagarImposto é o método
+        public Endereco? endereco { get; set; } //Composição Endereço (uma classe dentro de outra classe)
+        public abstract double PagarImposto (float rendimento); //Pessoa é a classe-mãe; PagarImposto é o método
     }
 }
