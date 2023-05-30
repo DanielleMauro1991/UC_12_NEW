@@ -1,4 +1,5 @@
-﻿using Sistema_UC12.Classes;
+﻿using System.Diagnostics;
+using Sistema_UC12.Classes;
 
 class Program
 {
@@ -37,7 +38,6 @@ Console.WriteLine(@$"
  Escolha uma das opções abaixo:
 
  1 - Pessoa Física;
-
  2 - Pessoa Jurídica;
 
  0 - Sair;
@@ -49,9 +49,7 @@ switch(opcao){
 
   case "1": 
 
-  PessoaFisica novapf = new PessoaFisica ();
-
-string? opcaoPF; //Submenu de Pessoa Física
+  string? opcaoPF; //Submenu de Pessoa Física
 
 do{
 
@@ -60,7 +58,6 @@ do{
  Escolha uma das opções abaixo:
 
  1 - Cadastrar Pessoa Física;
-
  2 - Mostrar Pessoas Físicas;
 
  0 - Voltar ao menu anterior;
@@ -68,21 +65,49 @@ do{
 
 opcaoPF = Console.ReadLine();
 
+switch (opcaoPF){
+
+  case "1": //Cadastrar pessoa física
+
+  PessoaFisica novapf = new PessoaFisica ();
+  Endereco endereco = new Endereco ();
+
+  Console.WriteLine("Digite o nome da Pessoa Física que deseja cadastrar")
+  novapf.Nome = Console.ReadLine();
+
+  Console.WriteLine("Digite o logradouro da Pessoa Física que deseja cadastrar");
+
+   endereco.logradouro = Console.ReadLine();
+  //  endereco.numero = 180;
+  //  endereco.complemento = "Escola SENAI";
+  //  endereco.enderecoComercial = true;
+
+  //  novapf.cpf = "080.733.239-90";
+  //  novapf.endereco = endereco;
+  //  novapf.DataNascimento = new DateTime (1991,06,16); //Padrão americano= Ano; mês; dia
+  
+  
+  break;
+
+  case "2": 
+  break;
+
+  case "0": 
+  break;
+
+  default: 
+  Console.Clear();
+  Console.Write("Opção Inválida, digite novamente");
+  Thread.Sleep(2000);
+  break;
+}
+
 }while (opcaoPF != "0");
 
-  // Endereco end = new Endereco ();
-
-  // end.logradouro = "Rua Niterói";
-  // end.numero = 180;
-  // end.complemento = "Escola SENAI";
-  // end.enderecoComercial = true;
+   
 
   
 
-  // novapf.cpf = "080.733.239-90";
-  // novapf.endereco = end;
-  // novapf.DataNascimento = new DateTime (1991,06,16); //Padrão americano= Ano; mês; dia
-  // novapf.Nome = "Ygor Andrade";
   
   // Console.WriteLine($"O endereço do {novapf.Nome} é {novapf.endereco.logradouro}, nº {novapf.endereco.numero}.");
   
