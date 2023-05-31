@@ -119,7 +119,7 @@ switch (opcaoPF){
     endereco.enderecoComercial = false;
    }
      
-  listaPF.Add(novapf);
+  //listaPF.Add(novapf);
   Console.WriteLine("Cadastro realizado com sucesso!");
   Thread.Sleep(2000);
 
