@@ -28,6 +28,8 @@ class Program
 
 BarraCarregamento("Iniciando");
 
+List<PessoaFisica> listaPF = List<PessoaFisica>();
+
 Console.Clear();
 
 string opcao;
