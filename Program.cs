@@ -120,6 +120,10 @@ switch (opcaoPF){
    }
      
   //listaPF.Add(novapf);
+  StreamWriter sw = new StreamWriter ($"{novapf.Nome}.txt");
+  sw.WriteLine(novapf.Nome);
+  sw.WriteLine(novapf.DataNascimento);
+
   Console.WriteLine("Cadastro realizado com sucesso!");
   Thread.Sleep(2000);
 
