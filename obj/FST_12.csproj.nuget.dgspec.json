@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_NEW\\FST_12.csproj": {}
+    "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_New\\FST_12.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_NEW\\FST_12.csproj": {
+    "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_New\\FST_12.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_NEW\\FST_12.csproj",
+        "projectUniqueName": "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_New\\FST_12.csproj",
         "projectName": "FST_12",
-        "projectPath": "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_NEW\\FST_12.csproj",
+        "projectPath": "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_New\\FST_12.csproj",
         "packagesPath": "C:\\Users\\Danielle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_NEW\\obj\\",
+        "outputPath": "C:\\Users\\Danielle\\Desktop\\PROGRAMADOR FULL STACK\\PROJETOS_GIT\\UC_12\\UC_12_NEW\\UC_12_New\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Danielle\\AppData\\Roaming\\NuGet\\NuGet.Config",

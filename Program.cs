@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using Sistema_UC12.Classes;
 
 class Program
@@ -28,7 +29,8 @@ class Program
 
 BarraCarregamento("Iniciando");
 
-List<PessoaFisica> listaPF = List<PessoaFisica>();
+
+List<PessoaFisica> listaPF = new List<PessoaFisica>(); //Criando uma lista para armazenar cadastros
 
 Console.Clear();
 
@@ -108,7 +110,7 @@ switch (opcaoPF){
    Console.WriteLine("Digite o complemento");
    endereco.complemento = Console.ReadLine();
 
-   Console.WriteLine("Trata-se de local comercial?  S/N");
+   Console.WriteLine("Trata-se de local comercial?  S/ N");
    string endCom = Console.ReadLine().ToUpper();
 
    if (endCom == "S"){
@@ -117,6 +119,10 @@ switch (opcaoPF){
     endereco.enderecoComercial = false;
    }
      
+  listaPF.Add(novapf);
+  Console.WriteLine("Cadastro realizado com sucesso!");
+  Thread.Sleep(2000);
+
   break;
 
   case "2": 
