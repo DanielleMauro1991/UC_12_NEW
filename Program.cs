@@ -126,6 +126,27 @@ switch (opcaoPF){
   break;
 
   case "2": 
+Console.Clear();
+
+if (listaPF.Count > 0){
+
+  foreach(PessoaFisica cadaPessoa in listaPF){
+    Console.Clear();
+    Console.WriteLine(@$"
+    Nome: {cadaPessoa.Nome}
+    Endereço: {cadaPessoa.endereco.logradouro}, {cadaPessoa.endereco.numero}, {cadaPessoa.endereco.complemento}
+    Data de nascimento: {cadaPessoa.DataNascimento}
+    ");
+
+    Console.WriteLine("Digite qualquer tecla para continuar.");
+    Console.ReadLine();
+  }
+
+}else{
+  Console.WriteLine("Lista vazia!Digite qualquer tecla para continuar.");
+  Console.ReadLine();
+  }
+
   break;
 
   case "0": 
