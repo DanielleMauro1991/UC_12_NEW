@@ -120,9 +120,15 @@ switch (opcaoPF){
    }
      
   //listaPF.Add(novapf);
-  StreamWriter sw = new StreamWriter ($"{novapf.Nome}.txt");
-  sw.WriteLine(novapf.Nome);
-  sw.WriteLine(novapf.DataNascimento);
+  // StreamWriter sw = new StreamWriter ($"{novapf.Nome}.txt");
+  // sw.WriteLine(novapf.Nome);
+  // sw.WriteLine(novapf.DataNascimento);
+  // sw.Close();
+
+  using(StreamWriter sw = new StreamWriter ($"{novapf.Nome}.txt")){
+    sw.WriteLine(novapf.Nome);
+    sw.WriteLine(novapf.DataNascimento);
+  }
 
   Console.WriteLine("Cadastro realizado com sucesso!");
   Thread.Sleep(2000);
@@ -130,26 +136,44 @@ switch (opcaoPF){
   break;
 
   case "2": 
-Console.Clear();
 
-if (listaPF.Count > 0){
+  Console.WriteLine ("Digite o nome da pessoa física");
 
-  foreach(PessoaFisica cadaPessoa in listaPF){
-    Console.Clear();
-    Console.WriteLine(@$"
-    Nome: {cadaPessoa.Nome}
-    Endereço: {cadaPessoa.endereco.logradouro}, {cadaPessoa.endereco.numero}, {cadaPessoa.endereco.complemento}
-    Data de nascimento: {cadaPessoa.DataNascimento}
-    ");
+  string registro = Console.ReadLine();
 
-    Console.WriteLine("Digite qualquer tecla para continuar.");
-    Console.ReadLine();
+    using(StreamReader sr = new StreamReader($"{registro}.txt")){
+    string linha;
+    while ((linha = sr.ReadLine()) != null){
+      Console.WriteLine($"{linha}");
+    }
   }
 
-}else{
-  Console.WriteLine("Lista vazia!Digite qualquer tecla para continuar.");
+  Console.WriteLine("Aperte qualquer tecla para continuar");
   Console.ReadLine();
-  }
+
+
+
+
+//  Console.Clear();
+// if (listaPF.Count > 0){
+
+//   foreach(PessoaFisica cadaPessoa in listaPF){
+//     Console.Clear();
+//     Console.WriteLine(@$"
+//     Nome: {cadaPessoa.Nome}
+//     Endereço: {cadaPessoa.endereco.logradouro}, {cadaPessoa.endereco.numero}, {cadaPessoa.endereco.complemento}
+//     Data de nascimento: {cadaPessoa.DataNascimento}
+//     ");
+
+//     Console.WriteLine("Digite qualquer tecla para continuar.");
+//     Console.ReadLine();
+//   }
+
+// }else{
+//   Console.WriteLine("Lista vazia!Digite qualquer tecla para continuar.");
+//   Console.ReadLine();
+//   }
+
 
   break;
 
